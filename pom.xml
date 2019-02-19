@@ -11,17 +11,6 @@
 	<name>Pack</name>
 	<url>http://maven.apache.org</url>
 
-	<repositories>
-		<repository>
-			<id>Selenium</id>
-			<url>https://gitlab.com/tech.cod.mk/selenium-api.git</url>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-		</repository>
-	</repositories>
-
 	<build>
 		<plugins>
 			<plugin>

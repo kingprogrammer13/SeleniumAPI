@@ -1,0 +1,230 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>API</groupId>
+	<artifactId>Selenium</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
+
+	<name>Pack</name>
+	<url>http://maven.apache.org</url>
+
+	<repositories>
+		<repository>
+			<id>Selenium</id>
+			<url>https://gitlab.com/tech.cod.mk/selenium-api.git</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<properties>
+
+		<spring.version>4.1.4.RELEASE</spring.version>
+		<Junit.version>4.12</Junit.version>
+		<AppEngine.version>1.9.51</AppEngine.version>
+		<Selenium.version>3.11.0</Selenium.version>
+		<TestNG.version>6.9.4</TestNG.version>
+		<JavaFaker.version>0.15</JavaFaker.version>
+		<datafactory.version>0.8</datafactory.version>
+		<commons.io.version>2.4</commons.io.version>
+		<screenshot.version>1.1</screenshot.version>
+		<assertions.version>2.1.0</assertions.version>
+		<extentreports.version>3.1.5</extentreports.version>
+		<javamail.version>1.3.3</javamail.version>
+		<activation.version>1.1.1</activation.version>
+		<mail.version>1.4.6-rc1</mail.version>
+		<jsoup.version>1.10.2</jsoup.version>
+		<poi.version>3.17</poi.version>
+		<poi-ooxml.version>3.17</poi-ooxml.version>
+		<commons-csv.version>1.5</commons-csv.version>
+		<opencsv.version>4.0</opencsv.version>
+		<mongodb.version>2.10.1</mongodb.version>
+		<pdfbox.version>2.0.11</pdfbox.version>
+		<fontbox.version>2.0.0</fontbox.version>
+		<jempbox.version>1.8.11</jempbox.version>
+		<xmpbox.version>2.0.0</xmpbox.version>
+		<preflight.version>2.0.0</preflight.version>
+		<pdfbox-tools.version>2.0.0</pdfbox-tools.version>
+		<commons-collections.version>3.2.2</commons-collections.version>
+		<xml.parse.version>2.4.0-b180830.0359</xml.parse.version>
+		<Logger.version>1.2.17</Logger.version>
+
+	</properties>
+
+<dependencies>
+
+		<!-- JUnit -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${Junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.assertj/assertj-assertions-generator-maven-plugin -->
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-assertions-generator-maven-plugin</artifactId>
+			<version>${assertions.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.appengine</groupId>
+			<artifactId>appengine-api-1.0-sdk</artifactId>
+			<version>${AppEngine.version}</version>
+		</dependency>
+
+		<!-- selenium dependency -->
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${Selenium.version}</version>
+		</dependency>
+
+		<!-- TestNG dependency -->
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${TestNG.version}</version>
+		</dependency>
+
+		<!-- Javafaker dependency -->
+
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>${JavaFaker.version}</version>
+		</dependency>
+
+		<!-- org.fluttercode.datafactory -->
+		<dependency>
+			<groupId>org.fluttercode.datafactory</groupId>
+			<artifactId>datafactory</artifactId>
+			<version>${datafactory.version}</version>
+			<type>jar</type>
+		</dependency>
+
+
+		<!-- Screenshot dependency -->
+		<dependency>
+			<groupId>com.github.yev</groupId>
+			<artifactId>screenshot</artifactId>
+			<version>${screenshot.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.directory.studio/org.apache.commons.io -->
+		<dependency>
+			<groupId>org.apache.directory.studio</groupId>
+			<artifactId>org.apache.commons.io</artifactId>
+			<version>${commons.io.version}</version>
+		</dependency>
+
+		<!-- http://extentreports.com/docs/versions/2/java/ -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>${extentreports.version}</version>
+		</dependency>
+
+		<!-- JavaMail API -->
+		<dependency>
+			<groupId>javamail</groupId>
+			<artifactId>javamail</artifactId>
+			<version>${javamail.version}</version>
+		</dependency>
+
+		<!-- Java Activation -->
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>${activation.version}</version>
+		</dependency>
+
+		<!-- JavaMail extension -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${mail.version}</version>
+		</dependency>
+
+		<!-- https://aboullaite.me/jsoup-html-parser-tutorial-examples/ -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>${jsoup.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi-ooxml.version}</version>
+		</dependency>
+
+		<!-- https://www.callicoder.com/java-read-write-csv-file-apache-commons-csv/ -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-csv</artifactId>
+			<version>${commons-csv.version}</version>
+		</dependency>
+
+		<!-- https://www.callicoder.com/java-read-write-csv-file-opencsv/ -->
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>${opencsv.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-collections/commons-collections -->
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>${commons-collections.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>${xml.parse.version}</version>
+		</dependency>
+
+		<!-- https://java2blog.com/log4j-maven-configuration-example/ -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${Logger.version}</version>
+		</dependency>
+
+	</dependencies>
+</project>
